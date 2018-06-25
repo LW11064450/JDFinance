@@ -1,0 +1,35 @@
+@import "./layout";
+
+@mixin btn($size: 14px,$color: #fff,$bgcolor: #f04752,$padding: 5px,$radius: 5px){
+  display: inline-block;
+  font-size: $size;
+  color: $color;
+  text-align: center;
+  line-height: 1;
+  padding: $padding;
+  background-color: $bgcolor;
+  border-radius: $radius;
+  border: 1px solid $bgcolor;
+}
+
+@mixin list($direction:column) {
+  @include flex($direction)
+}
+
+@mixin panel($bgcolor: #fff,$padding: 0,$margin: 20px 0,$height: 112px,$txtPadding: 0 32px,$color: #333,$fontSize: 32px) {
+  padding: $padding;
+  margin: $margin;
+  background-color: $bgcolor;
+  >h4{
+    height: $height;
+    color: $color;
+    line-height: $height;
+    text-align: center;
+    font-size: $fontSize;
+    padding: $txtPadding;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
